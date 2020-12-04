@@ -1,6 +1,7 @@
-var dictionnaire = ["SOLEIL", "OCEAN", "PELUCHE", "NOEL"];
+var dictionnaire = ["SOLEIL", "OCEAN", "PELUCHE", "NOEL", "BATTRE"];
 var lettresMot = [];
 var lettreMotAffiche = [];
+var nbrError=0;
 
 function initialization(){
     $('#startgame').css('display','none');
@@ -49,14 +50,28 @@ function playLetter(letter){
     //console.log('je suis une lettre ' + letter);
     //console.log(lettresMot[0] + " " + lettresMot[1])
     //console.log(lettreMotAffiche[0] + " " + lettreMotAffiche[1])
+    var lettretrouvee = false;
+    $('button#lettre'+letter).prop( "disabled", true );
     for (i = 1; i< lettresMot.length; i++) {
         
         if (lettresMot[i]==letter){
             //console.log("je suis la lettre identique "+letter)
             lettreMotAffiche[i]=letter;
+            lettretrouvee =true;
         }
     }
+    if (!lettretrouvee){
+        error();
+    }
     $('div#motatrouver').text(hiddenMot);
+}
+
+function error(){
+    nbrError=nbrError+1;
+    $('div#erreurs').prepend("Erreur vous etes mauvais");
+    if (nbrError==2){
+        $('div#erreurs').append("PERDU");
+    }
 }
 
 
