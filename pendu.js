@@ -12,7 +12,9 @@ function selectMot(){
     displayBlocks();
     return mot;
 }
-
-$('button#startbutton').on('click', $('div#motatrouver').text(selectMot()));
-$('#startbutton').on('click', console.log("rassuretoi je fonctionne"));
+$(document).ready(function() {
+    console.log( "ready!" );
+    $('button#startbutton').on('click', $('div#motatrouver').text(selectMot()));
+    $('#startbutton').on('click', console.log("rassuretoi je fonctionne"));
+});
 
