@@ -16,13 +16,16 @@ function selectMot(){
         //// creation du tableau mot entier
     for (i = 0; i< mot.length; i++) {
         lettresMot[i] = mot.charAt(i);
+        lettreMotAffiche[i] = mot.charAt(i);
     }
 
         //// creation du tableau du mot a afficher avec _
-    lettreMotAffiche =lettresMot;
+    //lettreMotAffiche= lettresMot;
+    //console.log(lettreMotAffiche[1])
     for (i = 1; i< lettreMotAffiche.length -1; i++) {
         lettreMotAffiche[i] = "_";
     }
+    
     motHide = hiddenMot();
     return motHide;
 }
@@ -43,19 +46,25 @@ function replay(){
 }
 
 function playLetter(letter){
-    console.log('je suis une lettre' + letter);
-    for (i = 1; i< lettresMot.length-1; i++) {
+    //console.log('je suis une lettre ' + letter);
+    //console.log(lettresMot[0] + " " + lettresMot[1])
+    //console.log(lettreMotAffiche[0] + " " + lettreMotAffiche[1])
+    for (i = 1; i< lettresMot.length; i++) {
+        
         if (lettresMot[i]==letter){
+            //console.log("je suis la lettre identique "+letter)
             lettreMotAffiche[i]=letter;
         }
     }
     $('div#motatrouver').text(hiddenMot);
 }
 
+
+
 $(document).ready(function() {
     $('button#startbutton').on('click', initialization);
     $('button#replay').on('click', replay);
-    $('button#lettreA').on('click', function() {playLetter('A');} );
+    $('button#lettreA').on('click', function() {playLetter("A");} );
     $('button#lettreB').on('click', function() {playLetter('B');} );
     $('button#lettreC').on('click', function() {playLetter('C');} );
     $('button#lettreD').on('click', function() {playLetter('D');} );
@@ -69,7 +78,7 @@ $(document).ready(function() {
     $('button#lettreL').on('click', function() {playLetter('L');} );
     $('button#lettreM').on('click', function() {playLetter('M');} );
     $('button#lettreN').on('click', function() {playLetter('N');} );
-    $('button#lettreO').on('click', function() {playLetter('O');} );
+    $('button#lettreO').on('click', function() {playLetter("O");} );
     $('button#lettreP').on('click', function() {playLetter('P');} );
     $('button#lettreQ').on('click', function() {playLetter('Q');} );
     $('button#lettreR').on('click', function() {playLetter('R');} );
