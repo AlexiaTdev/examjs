@@ -47,6 +47,8 @@ function replay(){
 	$('#ingame').css('display','none');
 	enabledAllLetters();
 	nbrError=0;
+    lettreMotAffiche = [];
+    lettresMot = [];
     $('#startgame').css('display','block')
     $('#ingame').css('display','non')
 }
