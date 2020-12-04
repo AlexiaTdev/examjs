@@ -1,6 +1,11 @@
 #startgame{
     display: block;
 }
+
 #ingame{
     display: none;
+}
+
+h1{
+    color: navy;
 }
