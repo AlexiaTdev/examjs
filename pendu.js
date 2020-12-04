@@ -42,7 +42,12 @@ function hiddenMot(){
 
 
 function replay(){
-    $('#startgame').css('display','block'),
+	$('div#erreurs').empty();
+	$('div#resultat').empty();
+	$('#ingame').css('display','none');
+	enabledAllLetters();
+	nbrError=0;
+    $('#startgame').css('display','block')
     $('#ingame').css('display','non')
 }
 
@@ -62,15 +67,83 @@ function playLetter(letter){
     }
     if (!lettretrouvee){
         error();
+    }else{
+    	$('div#erreurs').empty();
+    	$('div#erreurs').prepend("Bien joué !");
     }
     $('div#motatrouver').text(hiddenMot);
 }
 
+function gagne(){
+	desabledAllLetters();
+	$('div#resultat').append("GAGNE !!!!!!");
+}
+
+function enabledAllLetters(){
+	$('button#lettreA').prop( "disabled", false );
+	$('button#lettreB').prop( "disabled", false );
+	$('button#lettreC').prop( "disabled", false );
+	$('button#lettreD').prop( "disabled", false );
+	$('button#lettreE').prop( "disabled", false );
+	$('button#lettreF').prop( "disabled", false );
+	$('button#lettreG').prop( "disabled", false );
+	$('button#lettreH').prop( "disabled", false );
+	$('button#lettreI').prop( "disabled", false );
+	$('button#lettreJ').prop( "disabled", false );
+	$('button#lettreK').prop( "disabled", false );
+	$('button#lettreL').prop( "disabled", false );
+	$('button#lettreM').prop( "disabled", false );
+	$('button#lettreN').prop( "disabled", false );
+	$('button#lettreO').prop( "disabled", false );
+	$('button#lettreP').prop( "disabled", false );
+	$('button#lettreQ').prop( "disabled", false );
+	$('button#lettreR').prop( "disabled", false );
+	$('button#lettreS').prop( "disabled", false );
+	$('button#lettreT').prop( "disabled", false );
+	$('button#lettreU').prop( "disabled", false );
+	$('button#lettreV').prop( "disabled", false );
+	$('button#lettreW').prop( "disabled", false );
+	$('button#lettreX').prop( "disabled", false );
+	$('button#lettreY').prop( "disabled", false );
+	$('button#lettreZ').prop( "disabled", false );
+}
+
+function desabledAllLetters(){
+	$('button#lettreA').prop( "disabled", true );
+	$('button#lettreB').prop( "disabled", true );
+	$('button#lettreC').prop( "disabled", true );
+	$('button#lettreD').prop( "disabled", true );
+	$('button#lettreE').prop( "disabled", true );
+	$('button#lettreF').prop( "disabled", true );
+	$('button#lettreG').prop( "disabled", true );
+	$('button#lettreH').prop( "disabled", true );
+	$('button#lettreI').prop( "disabled", true );
+	$('button#lettreJ').prop( "disabled", true );
+	$('button#lettreK').prop( "disabled", true );
+	$('button#lettreL').prop( "disabled", true );
+	$('button#lettreM').prop( "disabled", true );
+	$('button#lettreN').prop( "disabled", true );
+	$('button#lettreO').prop( "disabled", true );
+	$('button#lettreP').prop( "disabled", true );
+	$('button#lettreQ').prop( "disabled", true );
+	$('button#lettreR').prop( "disabled", true );
+	$('button#lettreS').prop( "disabled", true );
+	$('button#lettreT').prop( "disabled", true );
+	$('button#lettreU').prop( "disabled", true );
+	$('button#lettreV').prop( "disabled", true );
+	$('button#lettreW').prop( "disabled", true );
+	$('button#lettreX').prop( "disabled", true );
+	$('button#lettreY').prop( "disabled", true );
+	$('button#lettreZ').prop( "disabled", true );
+}
+
 function error(){
     nbrError=nbrError+1;
+    $('div#erreurs').empty();
     $('div#erreurs').prepend("Erreur vous etes mauvais");
     if (nbrError==2){
-        $('div#erreurs').append("PERDU");
+    	desabledAllLetters();
+        $('div#resultat').append("PERDU");
     }
 }
 
