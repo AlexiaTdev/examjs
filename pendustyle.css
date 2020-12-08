@@ -3,9 +3,17 @@
 }
 
 #ingame{
-    display: none;
+    display: block;
 }
 
 h1{
     color: navy;
+}
+
+#erreurs{
+    min-height: 60px;
+}
+
+#scoreBoard{
+    margin-top: 20px;
 }
