@@ -5,55 +5,70 @@
   <title>PENDU JS</title>
   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
   <script src="pendu.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
   <link rel="stylesheet" href="pendustyle.css">
 </head>
 
 <body>
-
-<h1>PENDU JS</h1>
-
-<div id="ingame">
-  <div id="motatrouver">
-    <p>mot a trouver</p>
+<div class="container">
+  <div class="row">
+    <div class="col-md-5">&nbsp;</div>
+    <div class="col-md-6">
+      <h1>PENDU JS</h1>
+    </div>
   </div>
-  <div id="lettres">
-    <button class="lettre" id="lettreA">A</button>
-    <button class="lettre" id="lettreB">B</button>
-    <button class="lettre" id="lettreC">C</button>
-    <button class="lettre" id="lettreD">D</button>
-    <button class="lettre" id="lettreE">E</button>
-    <button class="lettre" id="lettreF">F</button>
-    <button class="lettre" id="lettreG">G</button>
-    <button class="lettre" id="lettreH">H</button>
-    <button class="lettre" id="lettreI">I</button>
-    <button class="lettre" id="lettreJ">J</button>
-    <button class="lettre" id="lettreK">K</button>
-    <button class="lettre" id="lettreL">L</button>
-    <button class="lettre" id="lettreM">M</button>
-    <button class="lettre" id="lettreN">N</button>
-    <button class="lettre" id="lettreO">O</button>
-    <button class="lettre" id="lettreP">P</button>
-    <button class="lettre" id="lettreQ">Q</button>
-    <button class="lettre" id="lettreR">R</button>
-    <button class="lettre" id="lettreS">S</button>
-    <button class="lettre" id="lettreT">T</button>
-    <button class="lettre" id="lettreU">U</button>
-    <button class="lettre" id="lettreV">V</button>
-    <button class="lettre" id="lettreW">W</button>
-    <button class="lettre" id="lettreX">X</button>
-    <button class="lettre" id="lettreY">Y</button>
-    <button class="lettre" id="lettreZ">Z</button>
+  <div class="row">
+    <div class="col-md-1">&nbsp;</div>
+    <div class="col-md-10">
+      <div id="ingame">
+        <div id="motatrouver">
+          <p>mot a trouver</p>
+        </div>
+      <div id="lettres">
+        <button class="lettre" id="lettreA">A</button>
+        <button class="lettre" id="lettreB">B</button>
+        <button class="lettre" id="lettreC">C</button>
+        <button class="lettre" id="lettreD">D</button>
+        <button class="lettre" id="lettreE">E</button>
+        <button class="lettre" id="lettreF">F</button>
+        <button class="lettre" id="lettreG">G</button>
+        <button class="lettre" id="lettreH">H</button>
+        <button class="lettre" id="lettreI">I</button>
+        <button class="lettre" id="lettreJ">J</button>
+        <button class="lettre" id="lettreK">K</button>
+        <button class="lettre" id="lettreL">L</button>
+        <button class="lettre" id="lettreM">M</button>
+        <button class="lettre" id="lettreN">N</button>
+        <button class="lettre" id="lettreO">O</button>
+        <button class="lettre" id="lettreP">P</button>
+        <button class="lettre" id="lettreQ">Q</button>
+        <button class="lettre" id="lettreR">R</button>
+        <button class="lettre" id="lettreS">S</button>
+        <button class="lettre" id="lettreT">T</button>
+        <button class="lettre" id="lettreU">U</button>
+        <button class="lettre" id="lettreV">V</button>
+        <button class="lettre" id="lettreW">W</button>
+        <button class="lettre" id="lettreX">X</button>
+        <button class="lettre" id="lettreY">Y</button>
+        <button class="lettre" id="lettreZ">Z</button>
+      </div>
+    </div>
   </div>
-  <div id="erreurs"></div>
-  <div id="resultat"></div>
-  
-
+  <div class="col-md-6">
+    <div id="erreurs"></div>
+    <div id="resultat"></div>
+  </div>
+  <div class="row">
+    <div class="col-md-3">
+      <br><br><br>
+    <button id="replay">replay</button>
+  </div>
+  </div>
+  </div>
+    <div id="scoreBoard"></div>
 </div>
-<button id="replay">replay</button>
-<div id="scoreBoard">
-  
-</div>
-
-
 </body>
 </html>
